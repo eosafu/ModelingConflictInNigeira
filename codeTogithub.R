@@ -38,7 +38,7 @@ spde <- inla.spde2.pcmatern(mesh = mesh,
                             prior.range = c(0.05, 0.01),
                             prior.sigma = c(1, 0.01)) 
 
-####  Dual mesh function, sourced from R-INLA
+####  Dual mesh function, sourced from R-INLA (Lindgren, F., Rue, H., and Lindstrom, J. (2011))
 ####  included here for self containment
 
 book.mesh.dual <- function(mesh) {
@@ -109,7 +109,7 @@ Model <- inla(y ~ 0 + intercept + f(i, model = spde),
               control.compute = list(config = TRUE,dic = TRUE,waic=TRUE,cpo=TRUE))
 
 # Read in boundary file
-boundary <- read.csv("boundary.csv")
+boundary <- read.csv("boundary.csv") # Available in this repository.
 
 # Projection into unsample regions
 stepsize <- 0.1 # the smaller the value the higher the smoothness
