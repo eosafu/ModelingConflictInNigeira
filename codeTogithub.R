@@ -1,5 +1,5 @@
-######## Example code for point pattern with spde #########
-######## A case study of Nigeria ##########################
+######## Poisson process with spde #########
+######## A toy example of Nigeria ##########
 library(viridis)
 library(rgdal)
 library(readxl)
