@@ -7,13 +7,12 @@ library(tidyverse)
 library(rgeos)
 library(INLA)
 set.seed(12345)
-# Import conflict data
 # Simulate violent event location
 longitude  <- sample(seq( 4.710416,14.65429,length=20000),2000,replace = T)
 latitude   <- sample(seq( 4.286446,14.37073,length=20000),2000,replace = T)
 dat   <- data.frame(longitude,latitude)
-n   <- nrow(dat) # get number total number of event
-xy  <- cbind(dat$longitude,dat$latitude) # extract long & lat
+n     <- nrow(dat) # get total number of event
+xy    <- cbind(dat$longitude,dat$latitude) # extract long & lat
 
 # Roughly determine nigeria boundary
 
