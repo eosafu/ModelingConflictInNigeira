@@ -31,7 +31,7 @@ loc.2D <- cbind(c(min(dat$longitude),
 ##### Determine structure of mesh 
 mesh <- inla.mesh.2d(loc.domain = loc.2D, offset = c(1, 1), 
                      max.edge = c(1, 1), cutoff =0.7)
-nfield <- mesh$n
+nfield <- mesh$n 
 
 spde <- inla.spde2.pcmatern(mesh = mesh,
                             # PC-prior for spatial range and vriance
