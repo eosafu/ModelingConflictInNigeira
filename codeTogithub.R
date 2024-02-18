@@ -1,4 +1,4 @@
-######## Poisson process with spde #########
+######## Cox point process with spde #########
 ######## A toy example of Nigeria ##########
 library(viridis)
 library(rgdal)
